@@ -1,0 +1,13 @@
+<%= render 'header' %>
+<p style="">نعتذر عن عدم تمكننا من قبول المقترح المقدم منك بعنوان: <%= @article.title %></p>
+<p style="">فى انتظار مقترحاتكم القادمة.</p>
+
+<p style="">
+<% if @article.editor.present? %>
+بيانات المحرر للمتابعة: <%= @article.editor.name %>
+<br/>
+<% end %>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+
+<%= render 'footer' %>

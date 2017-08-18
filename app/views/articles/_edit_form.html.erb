@@ -1,0 +1,99 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!-- <div class="field">
+    <%#= f.label :line_manager_id %><br>
+    <%#= f.select(:line_manager_id, LineManager.all.collect {|lm| [ lm.name, lm.id ] }, { include_blank: true }) %>
+  </div> -->
+  <!-- <div class="field">
+    <%#= f.label :status %><br>
+    <%#= f.number_field :status %>
+  </div> -->
+  <div class="form-group">
+    <%= f.label "الإسم" %>
+    <div><p> <%= f.object.user.name %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "عنوان المقال" %>
+    <div><p> <%= f.object.title %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "رقم التسجيل" %>
+    <div><p> <%= f.object.article_token %> </p></div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "عنوان المقال النهائي" %>
+    <%= f.text_field :final_title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "رابط المقال المترجم" %>
+    <%= f.text_field :drive_link, class: "form-control" %>
+  </div>
+  <% if @article.team.try(:name) == "ترجمة" %>
+    <div class="field">
+      <%= f.label "عدد الكلمات العربية المترجمة" %><br>
+      <%= f.number_field :translated_words_count %>
+    </div>
+    <div class="field">
+      <%= f.label "عدد الكلمات الأصلية" %><br>
+      <%= f.number_field :original_words_count %>
+    </div>
+  <% end %>
+  <!-- <div class="field">
+    <%#= f.label :start_date %><br>
+    <%#= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%#= f.label :deadline %><br>
+    <%#= f.datetime_select :deadline %>
+  </div>
+  <div class="field">
+    <%#= f.label :publish_date %><br>
+    <%#= f.datetime_select :publish_date %>
+  </div> -->
+  <!-- <div class="field">
+    <%#= f.label :progress_bar %><br>
+    <%#= f.number_field :progress_bar %>
+  </div>
+  <div class="field">
+    <%#= f.label :editor_id %><br>
+    <%#= f.select(:editor_id, Editor.all.collect {|e| [ e.name, e.id ] }, { include_blank: true }) %>
+  </div>
+   -->
+
+  <!-- <div class="field">
+    <%#= f.label :assignment_id %><br>
+    <%#= f.select(:assignment_id, Assignment.all.collect {|a| [ a.name, a.id ] }, { include_blank: true }) %>
+  </div>
+  -->
+  
+  <!--
+  <div class="field">
+    <%#= f.label :interest_id %><br>
+    <%#= f.select(:interest_id, Interest.all.collect {|a| [ a.title, a.id ] }, { include_blank: true }) %>
+  </div> -->
+  <!-- <div class="field">
+    <%#= f.label :sections_progress_bar %><br>
+    <%#= f.number_field :sections_progress_bar %>
+  </div> -->
+  <!-- <div class="field">
+    <%#= f.label :cms_link %><br>
+    <%#= f.text_field :cms_link %>
+  </div> -->
+  <!-- <div class="form-group">
+    <%#= f.label :notes %><br>
+    <%#= f.text_area :notes, class: "form-control", rows: "3" %>
+  </div> -->
+  <!-- <div class="actions"> -->
+    <%= f.submit "إرسل", class: "btn btn-primary" %>
+  <!-- </div> -->
+<% end %>

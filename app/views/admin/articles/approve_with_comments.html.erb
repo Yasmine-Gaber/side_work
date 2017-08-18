@@ -1,0 +1,47 @@
+<div class="fancybox_outlayer">
+<div class="title_bar" id="title_bar">
+  <div id="titlebar_left">
+    <h2 id="page_title">Approve Article With Comments</h2>
+  </div> 
+</div>
+<div class="flashes"></div>
+<div id="active_admin_content" class="without_sidebar">
+  <div id="main_content_wrapper">
+    <div id="main_content">
+
+      <%= form_for(@article, url: approve_with_comments_update_admin_article_path, method: :post, remote: true, html: {class: "formtastic"}) do |f| %>
+        <fieldset class="inputs"><!-- inputs -->
+          <ol>
+            <li class="" id="article_line_manager_id_input">
+              <%= f.label :line_manager %>
+              <%= f.select(:line_manager_id, LineManager.all.collect {|s| [s.name, s.id ] }, { include_blank: true }, class: "form-control") %>
+            </li>
+            <li class="" id="article_editor_id_input">
+              <%= f.label :editor %>
+              <%= f.select(:editor_id, Editor.all.collect {|s| [s.name, s.id ] }, { include_blank: true }, class: "form-control") %>
+            </li>
+            <li class="" id="article_approval_comments_input">
+              <%= f.label :approval_comments %>
+              <%= f.text_area :approval_comments, class: "form-control", rows: "3" %>
+            </li>
+          </ol>
+        </fieldset>
+
+        <fieldset class="actions">
+          <ol>
+            <li class="cancel">
+              <%= link_to "Cancel", modal_cancel_admin_article_path(@article), remote: true %>
+            </li>
+            <li id="article_submit_action" class="action input_action ">
+              <input type="submit" value="Approve" name="commit">
+            </li>
+            <!-- <li class="cancel">
+              <a href="/admin/mailboxer_conversations">إلغاء</a>
+            </li> -->
+          </ol>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

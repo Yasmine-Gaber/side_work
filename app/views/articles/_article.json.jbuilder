@@ -1,0 +1,2 @@
+json.extract! article, :id, :line_manager_id, :status, :title, :start_date, :deadline, :publish_date, :progress_bar, :editor_id, :user_id, :assignment_id, :drive_link, :interest_id, :sections_progress_bar, :cms_link, :notes, :created_at, :updated_at
+json.url article_url(article, format: :json)

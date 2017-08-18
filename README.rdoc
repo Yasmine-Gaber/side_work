@@ -1,0 +1,48 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+
+https://devcenter.heroku.com/articles/getting-started-with-rails4
+
+
+https://github.com/platanus/activeadmin_addons#select2
+
+
+
+rails g model user name:string email:string country_id:integer role:integer
+rails generate active_admin:resource User
+rails g scaffold article line_manager_id:integer status:integer title:string start_date:datetime deadline:datetime publish_date:datetime progress_bar:integer editor_id:integer reporter_id:integer assignment_id:integer drive_link:string interest_id:integer sections_progress_bar:integer cms_link:string notes:text
+rails generate active_admin:resource Article
+git push heroku master
+
+
+You must do all steps (pull/bundle/dbmigrate) using application user runner (su - sidework)
+bundle install --path=~/.bundled_gems
+systemctl restart sidework
+

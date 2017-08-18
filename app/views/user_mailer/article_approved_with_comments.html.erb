@@ -1,0 +1,17 @@
+<%= render 'header' %>
+<p style="">نحتاج المزيد من التفاصيل عن اقتراحك بعنوان: <%= @article.title %></p>
+<p style="">برجاء الإجابة على الاستفسار (الاستفسارات) التالية:</p>
+<p style=""><%= @article.approval_comments.gsub("\r\n","<br/>").gsub("\n","<br/>").gsub("\r","<br/>").html_safe %></p>
+<p style="">و الإجابة على الرابط التالي:</p>
+<p style=""><%= link_to submit_comments_article_url(article_token: @article.article_token), submit_comments_article_url(article_token: @article.article_token) %></p>
+<p style="font-weight: bold;">بيانات المراسل:</p>
+<p style="">
+الاسم: <%= @article.reporter.name %>
+<br/>
+التليفون: <%= "--" %>
+<br/>
+الإيميل: <%= @article.reporter.email %>
+<br/>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+<%= render 'footer' %>

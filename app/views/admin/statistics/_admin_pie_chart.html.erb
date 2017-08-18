@@ -1,0 +1,46 @@
+<div id="<%= div_id %>" style="width:100%; height:300px;"></div>
+
+<script type="text/javascript">
+$(function () {
+  $('#<%= div_id %>').highcharts({
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    credits: {
+      enabled: false
+    },
+    title: {
+      text: '<%= chart_title %>'
+    },
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+          '<td style="padding:0"><b>{point.y} مقالة</b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          style: {
+            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+          }
+      }
+      }
+    },
+    series: [{
+      name: 'عدد المقالات',
+      colorByPoint: true,
+      data: <%= raw data_series.to_json %>
+    }]
+  });
+});
+</script>

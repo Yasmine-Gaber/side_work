@@ -1,0 +1,14 @@
+<div class="panel" >
+  <div class="panel_contents stat_header">
+    Current shown statistics for the period that starts at
+    <span> <%=start_date%></span>
+    and ends at
+    <span> <%= end_date %> </span>
+    <% if subject.is_a? Array %>
+    for all subjects
+    <% else %>
+    for subject
+    <span> <%= Subject.where(id: subject).collect(&:to_s).join(", ") %> </span>
+    <% end %>
+  </div>
+</div>

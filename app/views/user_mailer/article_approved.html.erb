@@ -1,0 +1,35 @@
+<%= render 'header' %>
+<p style="">تم قبول مقال جديد وتم تكليفك بمتابعته.</p>
+<p>
+عنوان المقال: <%= @article.title %>
+<br/>
+<% unless @article.approval_comments.blank? %>
+تعليقات علي المقال: <%= @article.approval_comments %>
+<% end %>
+</p>
+
+<p style="font-weight: bold;">بيانات مساعدة:</p>
+<p style="">
+<% if @article.deadline.present? %>
+موعد التسليم المتوقع بتوقيت اسطنبول: <%= I18n.l(@article.deadline, format: :long, locale: :ar) %>
+<br/>
+<% end %>
+رابط متابعة المقال: <%= link_to admin_article_url(@article), admin_article_url(@article) %>
+<br/>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+
+<p style="font-weight: bold;">بيانات المراسل:</p>
+<p style="">
+الاسم: <%= @article.user.name %>
+<br/>
+التليفون: <%= "--" %>
+<br/>
+الإيميل: <%= @article.user.email %>
+<br/>
+<% if @article.deadline.present? %>
+موعد التسليم المتوقع بتوقيت اسطنبول: <%= I18n.l(@article.deadline, format: :long, locale: :ar) %>
+<% end %>
+</p>
+
+<%= render 'footer' %>

@@ -1,0 +1,12 @@
+<%= render 'header' %>
+<p style="">تم استلام إقتراح جديد.
+<p style="">
+مقدم الإقتراح: <%= @reporter_email %>
+<br/>
+<% if @options["title"].present? %>
+عنوان المقال: <%= @options["title"] %>
+<% end %>
+</p>
+
+<%= render 'footer' %>
+

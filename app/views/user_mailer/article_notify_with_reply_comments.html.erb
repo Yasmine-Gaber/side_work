@@ -1,0 +1,43 @@
+<%= render 'header' %>
+<p style="">لقد استلمنا إجابة الاستفسارات حول المقال التالي، فضلا قبول أو رفض المقال، أو التواصل مع الكاتب مباشرة لمزيد من الأسئلة إن كان ضروريا.</p>
+
+<p style="font-weight: bold;">بيانات المقال:</p>
+<p style="">
+عنوان المقال: <%= @article.title %>
+<br/>
+المراسل: <%= @article.reporter.name %>
+<br/>
+المحرر: <%= @article.editor.name %>
+<br/>
+رابط السيستم لتفاصيل أكثر: <%= link_to admin_article_url(@article), admin_article_url(@article) %>
+<br/>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+
+<p style="font-weight: bold;">الاستفسار:</p>
+<p style=""><%= @article.approval_comments.gsub("\r\n","<br/>").gsub("\n","<br/>").gsub("\r","<br/>").html_safe %></p>
+
+<p style="font-weight: bold;">إجابة المراسل:</p>
+<p style=""><%= @article.approval_comments_reply.gsub("\r\n","<br/>").gsub("\n","<br/>").gsub("\r","<br/>").html_safe %></p>
+
+<p style="font-weight: bold;">بيانات المراسل:</p>
+<p style="">
+الاسم: <%= @article.reporter.name %>
+<br/>
+التليفون: <%= "--" %>
+<br/>
+الإيميل: <%= @article.reporter.email %>
+</p>
+
+<p style="font-weight: bold;">القرار النهائي:</p>
+<p style="">
+<% link_txt = "" %>
+<% if @article.team.try(:name) == "مراسلون" %>
+<% link_txt = admin_articles_url(q: {user_id_eq: @article.reporter_id, title_equals: @article.title}) %>
+<% else %>
+<% link_txt = admin_articles_url(q: {user_id_eq: @article.reporter_id, title_equals: @article.title}) %>
+<% end %>
+للموافقة أو الرفض: <%= link_to "إضغط هنا", link_txt %>
+<br/>
+لإرسال إيميل للمراسل: <%= mail_to @article.reporter.email, @article.reporter.name %>
+</p>

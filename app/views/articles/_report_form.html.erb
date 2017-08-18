@@ -1,0 +1,73 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :team_id, class: "form-control" %>
+  <div class="form-group">
+    <%= f.label "البريد الإلكتروني" %><abbr class="req"> *</abbr><br>
+    <%= f.text_field :user_id, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "تصنيف المادة" %><br>
+    <%= f.select(:interest_id, Interest.all.collect {|i| [ i.title, i.id ] }, { include_blank: true }) %>
+  </div>
+  <div class="field">
+    <%= f.label "نوع المادة" %><br>
+    <%= f.select(:article_type_id, ArticleType.all.collect {|at| [ at.name, at.id ] }, { include_blank: true }) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "عنوان مبدئي" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "الفكرة المقترحة للقصة" %>
+    <%= f.text_area :suggested_idea, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "إذا كانت الفكرة تتناول حدثا يرجى تحديد تاريخ وقوعه" %><br>
+    <%= f.datetime_select :incident_date %>
+  </div>
+  <div class="field">
+    <%= f.label "دولة الحدث" %><br>
+    <%= f.select(:incident_country_id, Country.all.collect {|c| [ c.name_ar, c.id ] }, { include_blank: true }) %>
+  </div>
+  <div class="form-group">
+    <%= f.label "زاوية المعالجة" %>
+    <%= f.text_area :processing_point_of_view, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "لماذا يجب على هافينغتون عربي أن تنشر هذه القصة" %>
+    <%= f.text_area :why_publish, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "ما هي المصادر التي ستعتمدها لتنفيذ القصة" %>
+    <%= f.text_area :resources, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label "روابط المصادر" %>
+    <%= f.text_area :resources_links, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "كيف سيتم تنفيذ القصة" %><br>
+    <%= f.select(:execution_method, Article::EXECUTION_METHOD_LIST.map {|em| [em, em] }, { include_blank: true }) %>
+  </div>
+  <div class="field">
+    <%= f.label "هل يوجد صور أو فيديوهات مرفقة" %><br>
+    <%= f.select(:materials, Article::MATERIALS_LIST.map {|m| [m, m] }, { include_blank: true }) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "الموعد المتوقع للانتهاء منها" %><br>
+    <%= f.datetime_select :deadline %>
+  </div>
+  <br>
+  <%= f.submit "إرسل", class: "btn btn-primary" %>
+<% end %>

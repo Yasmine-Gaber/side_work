@@ -1,0 +1,275 @@
+ar:
+  hello: "اهلا ومرحبا"
+  active_admin:
+    powered_by: "  "
+  activerecord:
+    models:
+      admin_user:
+        one: "مسؤول الموقع"
+        other: "مسؤولون الموقع"
+      comment:
+        one: "تعليق"
+        other: "تعليقات"
+      team:
+        one: "الفريق"
+        other: "الفرق"
+      active_admin_comment:
+        one: "تعليق"
+        other: "تعليقات"
+      country:
+        one: "دولة"
+        other: "دول"
+      user:
+        one: "مستخدم"
+        other: "مستخدمون"
+      article:
+        one: "موضوع"
+        other: "المواضيع"
+      translate_article:
+        one: "موضوع - ترجمة"
+        other: "ترجمة"
+      report_article:
+        one: "موضوع - مراسلون"
+        other: "مراسلون"  
+      news_article:
+        one: "خبر"
+        other: "أخبار"
+      translate_news:
+        one: "أخبار - ترجمة"
+        other: "أخبار - ترجمة"
+      report_news:
+        one: "أخبار - مراسلون"
+        other: "أخبار - مراسلون"  
+      viral_article:
+        one: "فايرال"
+        other: "فايرال"
+      translate_viral:
+        one: "فايرال - ترجمة"
+        other: "فايرال - ترجمة"
+      report_viral:
+        one: "فايرال - مراسلون"
+        other: "فايرال - مراسلون"      
+      article_country:
+        one: "المنطقة الجغرافية"
+        other: "المناطق الجغرافية"
+      country:
+        one: "البلد"
+        other: "البلاد"
+      article_type:
+        one: "نوع المادة"
+        other: "أنواع المواد"
+      articles_persona:
+        one: "برسونا"
+        other: "برسونا"
+      persona:
+        one: "برسونا"
+        other: "برسونا"
+      interest:
+        one: "تصنيف المادة"
+        other: "تصنيفات المواد"
+      message_log:
+        one: "تسجيل الرسائل"
+        other: "تسجيلات الرسائل"
+      role:
+        one: "صفة المستخدم"
+        other: "صفات المستخدمين"
+      status:
+        one: "الحالة"
+        other: "الحالات"
+    attributes:
+      admin_user:
+        id: رقم
+        name: اسم المسؤول
+        email: "البريد الالكتروني"
+        password: "كلمة المرور"
+        password_confirmation: "تأكيد كلمة المرور"
+        current_sign_in_at: تاريخ الدخول الحالي
+        sign_in_count: عدد مرات الدخول
+        created_at: تاريخ الاضافة
+        encrypted_password: كلمة المرور المشفرة
+        reset_password_token: رمز اعادة كلمة المرور
+        reset_password_sent_at: تاريخ ارسال اعادة كلمة المرور
+        remember_created_at: اخر تاريخ تذكرني
+        updated_at: اخر تحديث
+        last_sign_in_ip: اخر عنوان للدخول
+        current_sign_in_ip: عنوان الدخول الحالي
+        last_sign_in_at:  اخر تاريخ دخول
+      country:
+        id: رقم
+        name_en: الاسم
+        name_ar: الاسم بالعربي
+        alpha3: الرمز
+        created_at: تاريخ الاضافة
+        updated_at: تاريخ التحديث
+      team:
+        id: رقم
+        name: الاسم
+        created_at: تاريخ الاضافة
+        updated_at: تاريخ التحديث
+      user:
+        id: رقم
+        email: البريد الالكتروني
+        password: كلمة المرور
+        password_confirmation: تأكيد كلمة المرور
+        current_password: كلمة المرور الحالية
+        name: اسم المستخدم
+        job_title: المهنة
+        summary: نبذة عنك
+        type: نوع التسجيل
+        country_id: الجنسية
+        country: الجنسية
+        national_id_no: رقم الهوية الوطنية
+        residency_no: رقم الإقامة
+        residency_no_hint: رقم الاقامة بالسعودية
+        confirmed_identity: تأكيد الهوية
+        remember_me: تذكرني
+        current_sign_in_at: تاريخ الدخول
+        sign_in_count: عدد مرات الدخول
+        last_sign_in_at: اخر تاريخ دخول
+        confirmed_at: تاريخ التأكيد
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+        confirmed: تأكيد البريد الالكتروني
+        avatar: الصورة الشخصية
+        corporate_logo: شارة الشركة
+        dob: تاريخ الميلاد
+        gender: النوع
+        male: ذكر
+        female: أنثى
+        skill_ids: المهارات
+        category_ids: الاهتمامات
+        authentications: مسجل عن طريق
+        status: حالة الحساب
+        locked_at: تاريخ إيقاف الحساب
+        avg_rating_as_freelancer: متوسط التقييم كمستقل
+        avg_rating_as_corporate: متوسط التقييم كشركة
+      article_country:
+        id: رقم
+        name: الاسم
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+      article_type:
+        id: رقم
+        key: الاسم باللغة الانجليزية
+        name: الاسم
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+        daily_target: الهدف اليومي
+        weekly_target: الهدف الإسبوعي
+        monthly_target: الهدف الشهري
+      article:
+        id: رقم
+        title: عنوان الموضوع
+        reporter: المراسل
+        reporter_id: المراسل
+        user: المراسل
+        user_id: المراسل
+        line_manager_id: مسؤول الشيفت
+        line_manager: مسؤول الشيفت
+        status_id: الحالة
+        status: الحالة
+        start_date: تاريخ البدء
+        deadline: تاريخ الانتهاء
+        publish_date: تاريخ النشر
+        progress_bar: نسبة التقدم
+        editor_id: المحرر
+        editor: المحرر
+        reporter_id: المراسل
+        reporter: المراسل
+        user_id: المراسل
+        user: المراسل
+        assignment_id: الديسك
+        assignment: الديسك
+        drive_link: رابط العمل النهائي
+        interest_id: التصنيف
+        interest: التصنيف
+        sections_progress_bar: نسبة تقدم الأقسام
+        cms_link: رابط النشر
+        notes: ملاحظات الديسك - داخليا
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+        approval_comments: ملاحظات الديسك - للمراسل
+        approval_status: حالة الموافقة
+        sheet_row: مسلسل الملف
+        article_country_id: المنطقة الجغرافية
+        article_country: المنطقة الجغرافية
+        article_token: رقم التسجيل
+        approval_comments_reply: رد المراسل علي ملاحظات الديسك
+        article_type_id: نوع المادة
+        article_type: نوع المادة
+        personas: البرسونا
+        persona_ids: البرسونا
+        title: عنوان الموضوع
+        original_link: رابط للموضوع الأصلي
+        suggested_idea: الفكرة المقترحة للقصة
+        incident_date: تاريخ وقوعه الحدث
+        incident_country_id: دولة الحدث
+        incident_country: دولة الحدث
+        processing_point_of_view: زاوية المعالجة
+        why_publish: سبب نشر الموضوع علي هافينغتون عربي
+        resources: المصادر المعتمدة
+        resources_links: روابط المصادر
+        execution_method: كيفية تنفيذ القصة
+        materials: صور أو فيديوهات مرفقة
+        final_title: عنوان الموضوع النهائي
+        translated_words_count: عدد الكلمات الأصلية
+        original_words_count: عدد الكلمات
+        team: الفريق
+        details: تفاصيل الموضوع
+        publisher: الناشر
+        publisher_id: الناشر
+        designer: المصمم
+        designer_id: المصمم
+        reporter_desk_notes: ملاحظات ديسك المراسلين
+        trans_desk_notes: ملاحظات ديسك الترجمة
+        reporter_notes: ملاحظات المحرر المتابع
+        manager_notes: ملاحظات المدير - مسؤول الشيفت
+        publish_flag: حالة النشر
+      interest:
+        id: رقم
+        title: الاسم
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+        daily_target: الهدف اليومي
+        weekly_target: الهدف الإسبوعي
+        monthly_target: الهدف الشهري
+        key: الاسم باللغة الانجليزية
+      message_log:
+        id: رقم
+        log_type: الرمز
+        description: الوصف
+        article_id: الموضوع
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+      persona:
+        id: رقم
+        name: الاسم
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+        daily_target: الهدف اليومي
+        weekly_target: الهدف الإسبوعي
+        monthly_target: الهدف الشهري
+      role:
+        id: رقم
+        title: الاسم باللغة الانجليزية
+        title_ar: الاسم باللغة العربية
+        accessibility_rule_ids: أحكام الوصول
+        accessibility_rules: أحكام الوصول
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+      status:
+        id: رقم
+        key: الاسم باللغة الانجليزية
+        name: الاسم
+        created_at: تاريخ التسجيل
+        updated_at: تاريخ التحديث
+    errors:
+      models:
+        article:
+          attributes:
+            title:
+              blank: فارغ، يرجى تعبئة الحقل
+            reporter_id:
+              blank: فارغ، يرجى تعبئة الحقل
+            user_id:
+              blank: فارغ، يرجى تعبئة الحقل

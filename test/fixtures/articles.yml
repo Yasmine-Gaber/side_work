@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_manager_id: 1
+  status: 1
+  title: MyString
+  start_date: 2016-09-22 09:21:01
+  deadline: 2016-09-22 09:21:01
+  publish_date: 2016-09-22 09:21:01
+  progress_bar: 1
+  editor_id: 1
+  user_id: 1
+  assignment_id: 1
+  drive_link: MyString
+  interest_id: 1
+  sections_progress_bar: 1
+  cms_link: MyString
+  notes: MyText
+
+two:
+  line_manager_id: 1
+  status: 1
+  title: MyString
+  start_date: 2016-09-22 09:21:01
+  deadline: 2016-09-22 09:21:01
+  publish_date: 2016-09-22 09:21:01
+  progress_bar: 1
+  editor_id: 1
+  user_id: 1
+  assignment_id: 1
+  drive_link: MyString
+  interest_id: 1
+  sections_progress_bar: 1
+  cms_link: MyString
+  notes: MyText

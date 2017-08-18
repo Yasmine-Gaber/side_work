@@ -1,0 +1,70 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "fancybox";
+@import "active_admin/select2/base";
+@import "active_admin_datetimepicker";
+
+$skinLogo: image_url("logo4.jpg") no-repeat 0 0;
+$skinHeaderBck: #04695D;
+$panelHeaderBck: #018878;
+$skinActiveColor: #018878;
+
+@import "active_skin";
+
+#title_bar{
+  border-bottom: 4px solid #018878;
+}
+.breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb a:active{
+  color: #272727;
+}
+.attributes_table table th, .attributes_table table td, table.index_table td{
+  color: #1e2a33;
+}
+table.index_table td a, table.index_table td a:link, table.index_table td a:visited {
+  color: #018878;
+}
+
+
+
+#title_bar{
+  z-index: 0 !important;
+}
+.fancybox-title {
+  padding: 0 0 10px 0;
+}
+.fancybox-wrap{
+  width: auto !important;
+}
+.fancybox-outer{
+  /*border: solid !important;*/
+  border: solid 1px #cdcdcd;
+  border-color: #000; /* #d4d4d4; */
+  border-top-color: #000; /* #e6e6e6; */
+  border-right-color: #000; /* #d4d4d4; */
+  border-bottom-color: #000; /* #cdcdcd; */
+  border-left-color: #000; /* #d4d4d4; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 0 1px #FFF inset;
+  min-width: 480px;
+}
+.fancybox-inner{
+  width: auto !important;
+  height: auto !important;
+  background: #efefef; 
+}
+
+input[disabled="disabled"],
+input[disabled] {
+  background-color: #F4F4F4;
+  border: 0px solid #F4F4F4 !important;
+  padding: 0px !important;
+}

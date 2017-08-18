@@ -1,0 +1,12 @@
+<%= render 'header' %>
+<p style="">تم استلام المقترح الخاص بك بعنوان: <%= @article.title %></p>
+<p style="">سيتم مراجعة الإقتراح من خلال إدارتنا واعلامك في حالة قبول أو رفض الاقتراح.</p>
+
+<p style="">
+<% if @article.editor.present? %>
+بيانات المحرر  للمتابعة: <%= @article.editor.name %>
+<br/>
+<% end %>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+<%= render 'footer' %>

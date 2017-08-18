@@ -1,0 +1,28 @@
+<div class="card note">
+  <div class="card-header">
+    <h5>شكراً جزيلاً،</h5>
+    <% if @article.present? && @article.approval_status == "approved" %>
+    <h2>تم استلام المقال</h2>
+    <% else %>
+    <h2>تم استلام المقترح الخاص بك</h2>
+    <% end %>
+  </div>
+  <div class="card-block">
+    <div><label>عنوان المقال</label><span> <%= @article_title || @article.title %></span></div>
+    <% if @article.present? %>
+    <div><label>رقم التسجيل</label><span> <%= @article.article_token %></span></div>
+    <% end %>
+    <div class="notice">
+      <% if @article.present? && @article.approval_status == "approved" %>
+      <p>سيتم التواصل معك من خلال بريدك الإلكتروني حال تواجد أي تعليقات من طرفنا.</p>
+      <% else %>
+      <p>سيتم التواصل معك من خلال بريدك الإلكتروني بخصوص الخطوات التالية.</p>
+      <% end %>
+    </div>
+    <div><p>
+      تحياتنا،،
+      <br/>
+      فريق تحرير هافينغتون بوست عربي
+    </p></div>
+  </div>
+</div>

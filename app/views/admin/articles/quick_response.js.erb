@@ -1,0 +1,6 @@
+<% if @article.errors.any? %>
+  var html = "<%= escape_javascript(render 'error_messages', object: @article) %>";
+  $('#quick-add-errors').html(html);
+<% else %>
+  window.location.reload();
+<% end %>

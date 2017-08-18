@@ -1,0 +1,10 @@
+<!-- <li class="string input optional stringish" id="article_title_input">
+  <label for="article_title" class="label">Title</label>
+  <span id="article_title" name="article[title]"><%#= object.title %></span>
+</li> -->
+<li class="select input optional" id="article_user_input">
+  <label for="article_user_id" class="label">User</label>
+  <span name="article[user_id]" id="article_user_id"><%= link_to object.user.name, admin_user_path(object.user) %></span>
+</li>
+
+

@@ -1,0 +1,160 @@
+ar:
+  formtastic:
+    yes: 'Yes'
+    no: 'No'
+    create: "حفظ %{model}"
+    update: "تحديث %{model}"
+    submit: "حفظ %{model}"
+    cancel: 'إلغاء %{model}'
+    reset: 'إلغاء %{model}'
+    required: 'مطلوب'
+  active_admin:
+    menu:
+      users: المستخدمين
+      comments: التعليقات
+    flash:
+      actions:
+        create:
+          notice: 'تم أضافة %{resource_name} بنجاح'
+          alert: 'لم نتمكن من اضافته %{resource_name}.'
+        update:
+          notice: 'تم حفظ بيانات %{resource_name} بنجاح.'
+          alert: 'لم نتمكن من حفظه بيانات %{resource_name}'
+        destroy:
+          notice: 'تم حذفه %{resource_name} بنجاح'
+          alert: 'لم نتمكن من حذف %{resource_name}'
+    dashboard: لوحة التحكم - كل الفرق
+    dashboard_news: لوحة التحكم - فريق الآخبار
+    dashboard_viral: لوحة التحكم - فريق الفايرال
+    dashboard_welcome:
+      welcome: ".مرحبا بك"
+    view: "عرض"
+    edit: "تعديل"
+    delete: "حذف"
+    delete_confirmation: "هل تريد تأكيد الحذف؟"
+    new_model: "%{model} جديد + "
+    submit_model: "حفظ %{model}"
+    create_model: "حفظ %{model}"
+    edit_model: "تعديل %{model}"
+    update_model: "تحديث %{model}"
+    delete_model: "حذف %{model}"
+    details: "تفاصيل %{model}"
+    cancel: "إلغاء"
+    empty: "فارغ"
+    previous: "السابق"
+    next: "التالي"
+    download: "تحميل"
+    has_many_new: "اضافة %{model} جديد"
+    has_many_delete: "حذف"
+    has_many_remove: "ازالة"
+    filters:
+      buttons:
+        filter: "تصنيف"
+        clear: "تفريغ"
+      predicates:
+        contains: "يحتوي"
+        equals: "متساوي"
+        starts_with: "يبدأ ب"
+        ends_with: "ينتهي ب"
+        greater_than: "اكثر من"
+        less_than: "اقل من"
+        in: يكون
+    status_tag:
+      "yes": "نعم"
+      "no": "لا"
+    main_content: "الرجاء التنفيذ %{model}#main_content لعرض المحتويات."
+    logout: "تسجيل الخروج"
+    powered_by: "تنفيذ %{active_admin} %{version}"
+    sidebars:
+      filters: "التصنيفات"
+    pagination:
+      empty: "لا يوجد %{model} "
+      one: "عرض <b>1</b> %{model}"
+      one_page: "عرض <b>all %{n}</b> %{model}"
+      multiple: "عرض %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{total}</b> in total"
+      multiple_without_total: "عرض %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b>"
+      entry:
+        one: "مدخل"
+        other: "مدخلات"
+    any: "أي"
+    blank_slate:
+      content: "لا يوجد  %{resource_name} بعد."
+      link: ""
+    dropdown_actions:
+      button_label: "عمليات"
+    batch_actions:
+      button_label: "أفعال مجمعة"
+      default_confirmation: "هل انت متأكد من هذا"
+      delete_confirmation: " هل انت متأكد من حذف هذا%{plural_model}?"
+      succesfully_destroyed:
+        one: "حذفت بنجاح 1 %{model}"
+        other: "حذفت بنجاح %{count} %{plural_model}"
+      selection_toggle_explanation: "(تتبيث الخيار)"
+      link: "إنشاء"
+      action_label: "%{title}"
+      labels:
+        destroy: "حذف"
+        approve: "موافقة"
+        approve_with_comments: "استفسار"
+        reject: "رفض"
+        assign_lm: "تعيين مسؤول الشيفت"
+        assign_editor: 'تعيين محرر'
+        change_status: "تغيير الحالة"
+    comments:
+      resource_type: "نوع المصادر"
+      author_type: "نوع الؤلف"
+      body: "هيكل"
+      author: "مؤلف"
+      title: "تعليق"
+      add: "إضافة تعليق"
+      delete: "حذف تعليق"
+      resource: "مصادر"
+      no_comments_yet: "لا يوجد تعليقات بعد"
+      delete_confirmation: "هل انت متأكد من حذف التعليق؟"
+      author_missing: "مجهول"
+      title_content: "تعليقات (%{count})"
+      errors:
+        empty_text: "لم يتم إضافة تعليق، النص فارغ"
+      username:
+        title: "اسم المستخدم"
+      email:
+        title: "إايميل"
+      subdomain:
+        title: "فرعي"
+      password:
+        title: "كلمة المرور"
+      sign_up:
+        title: "تسجيل الدخول"
+        submit: "تسجيل الدخول"
+      login:
+        title: "دخول"
+        remember_me: "تذكرني"
+        submit: "تسجيل"
+      reset_password:
+        title: "هل نسيت كلمة المرور؟"
+        submit: "استرجاع كلمة المرور"
+      change_password:
+        title: "تغير كلمة المرور"
+        submit: "تغير كلمة المرور"
+      unlock:
+        title: "إعادة ارسال التعليمات المحررة"
+        submit: "إعادة ارسال التعليمات المحررة"
+      resend_confirmation_instructions:
+        title: ""
+        submit: "إعادة ارسال تعليمات التأكيد"
+      links:
+        sign_in: "دخول"
+        forgot_your_password: "هل نسيت كلمة المرور؟"
+        sign_in_with_omniauth_provider: "تسجيل الدخول ب %{provider}"
+    access_denied:
+      message: "غير مصرح لك"
+    index_list:
+      table: "جدول"
+      block: "قائمة"
+      grid: "شبكة"
+      blog: "مدونة"
+    devise:
+      login:
+        submit: "تسجيل"
+    skill:
+      succesfully_reviewed: تم الموافقة علي المهارة بنجاح

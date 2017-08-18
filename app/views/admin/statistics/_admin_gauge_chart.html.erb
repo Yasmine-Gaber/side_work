@@ -1,0 +1,31 @@
+<div id="<%= div_id %>" style="width: 30%; height: 200px; float: left"></div>
+
+<script type="text/javascript">
+    
+$(function () {
+  $('#<%= div_id %>').highcharts(Highcharts.merge(gaugeOptions, {
+    yAxis: {
+      min: 0,
+      max: <%= (target_value).round(0) %>,
+      title: {
+        text: '<%= chart_title %>'
+      }
+    },
+    credits: {
+      enabled: false
+    },
+    series: [{
+      name: '<%= chart_title %>',
+      data: [<%= articles_count %>],
+      dataLabels: {
+        format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+          ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '"><%= percentage %>%</span></div>'
+      },
+      tooltip: {
+        pointFormat: '<div style="z-index: 99999;"><span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}/<%= target_value %> مقالة</b></div><br/>',
+        useHTML: true
+      }
+    }]
+  }));
+});
+</script>

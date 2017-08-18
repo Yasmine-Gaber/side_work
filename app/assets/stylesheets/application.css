@@ -1,0 +1,64 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * require_tree .
+ *= require fancybox
+ *= require_self
+ */
+
+a.navbar-brand{
+  float: right;
+  padding-right: 70px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/*form, h1, .note{*/
+.container{
+  direction: rtl;
+  padding-top: 20px;
+}
+.form-group {
+  width: 80%;
+}
+.form-group div{
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  background: #F5F5F5;
+}
+
+.form-group p{
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.note label{
+  font-weight: bold;
+}
+
+.note span{
+  padding-right: 30px;
+}
+
+.note .notice{
+ padding-top: 30px;
+}
+/*.form-div{
+  padding-top: 30px;
+  padding-left: 70px;
+}*/
+
+abbr{
+  border-bottom: none;
+  color: red;
+}

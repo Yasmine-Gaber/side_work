@@ -1,0 +1,38 @@
+<div id="<%= div_id %>" style="width:100%; height:300px;"></div>
+
+<script type="text/javascript"> 
+$(function () {
+  $('#<%= div_id %>').highcharts({
+    title: {
+      text: '<%= chart_title %>',
+      x: -20 //center
+    },
+    credits: {
+      enabled: false
+    },
+    xAxis: {
+      categories: <%= raw x_axis.to_json %>
+    },
+    yAxis: {
+      title: {
+        text: 'عدد المقالات'
+      },
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+      }]
+    },
+    tooltip: {
+      valueSuffix: '°C'
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+    },
+    series: <%= raw data_series.to_json %>
+  });
+});
+</script>

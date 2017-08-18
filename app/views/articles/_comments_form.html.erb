@@ -1,0 +1,23 @@
+<%= form_for(@article) do |f| %>
+  <div class="form-group">
+    <%= f.label "الإسم" %>
+    <div><p> <%= f.object.user.name %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "عنوان المقال" %>
+    <div><p> <%= f.object.title %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "رقم التسجيل" %>
+    <div><p> <%= f.object.article_token %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "الإستفسارات" %>
+    <div><p> <%= f.object.approval_comments.gsub("\r\n","<br/>").gsub("\n","<br/>").gsub("\r","<br/>").html_safe %> </p></div>
+  </div>
+  <div class="form-group">
+    <%= f.label "الإجابة علي الإستفسارات" %><br>
+    <%= f.text_area :approval_comments_reply, class: "form-control" %>
+  </div>
+  <%= f.submit "إرسل", class: "btn btn-primary" %>
+<% end %>

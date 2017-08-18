@@ -1,0 +1,18 @@
+<%= render 'header' %>
+<p style="">شكراً جزيلاً، تم قبول إقتراحك بعنوان: <%= @article.title %></p>
+<p style="">برجاء الإنتهاء من المقال في الموعد المحدد  وإرساله على الرابط التالي:</p>
+<p style=""><%= link_to edit_article_url(article_token: @article.article_token), edit_article_url(article_token: @article.article_token) %></p>
+
+<p style="">
+<% if @article.deadline.present? %>
+موعد التسليم المتوقع بتوقيت اسطنبول: <%= I18n.l(@article.deadline, format: :long, locale: :ar) %>
+<br/>
+<% end %>
+<% if @article.editor.present? %>
+إيميل المحرر المسئول  للمتابعة: <%= @article.editor.email %>
+<br/>
+<% end %>
+رقم التسجيل: <%= @article.article_token %>
+</p>
+
+<%= render 'footer' %>

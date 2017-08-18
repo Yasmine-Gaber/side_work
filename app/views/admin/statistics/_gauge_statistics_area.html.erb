@@ -1,0 +1,9 @@
+<%= render(partial: 'admin/statistics/diagram_scripts') %>
+  <fieldset class="inputs">
+  	<h2 style="text-align: center;"><%= chart_title %></h2>
+  	<div style="width: 100%;">
+    <% guage_titles.each_with_index do |title, index| %>
+	    <%= render(partial: 'admin/statistics/admin_gauge_chart', locals: {div_id: div_ids[index], chart_title: title, articles_count: articles_counts[index], target_value: target_values[index], percentage: ((articles_counts[index].to_f/target_values[index])*100).round(0)}) %>
+    <% end %>
+    </div>
+  </fieldset>
